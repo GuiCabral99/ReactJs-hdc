@@ -15,7 +15,7 @@ Props.propTypes = {
 
 Props.defaultProps = {
   marca: "Marca não encontrada",
-  lancamento: "????"
+  lancamento: 123
 }
 
 export default Props;
