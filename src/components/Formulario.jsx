@@ -1,32 +1,54 @@
 import { React, useState } from "react";
 
+
 function Formulario() {
 
-    function cadastrarUsuario(e) {
+
+    function registerUser(e) {
         e.preventDefault();
         console.log("usuario cadastrado");
-        console.log(nome)
+        console.log(name)
+        console.log(password);
     }
 
-    const [nome, setNome] = useState();
+    function getName(e) {
+        setName(e.target.value);
+    };
+
+    function getPassword(e) {
+        setPassword(e.target.value)
+    }
+
+
+    const [name, setName] = useState();
+    const [password, setPassword] = useState();
+
 
     return ( 
         <>
             <h2>Formulário</h2>
             <form>
                 <div>
-                    <label htmlFor="nome">Nome: </label>
+                    <label htmlFor="name">Nome: </label>
                     <input
                     type="text"
-                    name="nome"
-                    id="nome" 
+                    name="name"
+                    id="name" 
                     placeholder="Digite seu nome"
-                    onChange={(e) => {setNome(e.target.value); console.log(nome)}} />
+                    onChange={getName} />
 
-                    <label htmlFor="senha">Senha: </label>
-                    <input type="text" name="senha" id="senha" placeholder="Digite uma senha" />
+                    <label htmlFor="password">Senha: </label>
+                    <input 
+                    type="text" 
+                    name="password" 
+                    id="password" 
+                    placeholder="Digite uma senha" 
+                    onChange={getPassword} />
 
-                    <input type="submit" value="Cadastrar" onClick={cadastrarUsuario} />
+                    <input 
+                    type="submit" 
+                    value="Cadastrar" 
+                    onClick={registerUser} />
                 </div>
             </form>
         </>

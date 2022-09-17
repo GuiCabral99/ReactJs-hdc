@@ -1,17 +1,26 @@
 import { PropTypes } from "prop-types";
 
+import EventBtn from "./EventBtn";
 
 
-function Evento({mensagem}) {
-    // Evento vinculado ao btn
+function Evento() {
+
+
     function meuEvento() {
-        alert(`${mensagem}`)
+        alert("evento em props")
     }
+
+    function segundoEvento() {
+        alert("segundo evento em props")
+    }
+
 
     return ( 
         <>
             <p>Clique para disparar um evento:</p>
-            <button onClick={meuEvento}>Ativar!</button>
+            <EventBtn event={meuEvento} text="botao evento" />
+            <EventBtn event={segundoEvento} text="segundo botao evento" />
+            
         </>
      );
 }
