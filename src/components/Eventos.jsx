@@ -17,6 +17,7 @@ function Evento() {
 
     return ( 
         <>
+            <h2>Eventos</h2>
             <p>Clique para disparar um evento:</p>
             <EventBtn event={meuEvento} text="botao evento" />
             <EventBtn event={segundoEvento} text="segundo botao evento" />

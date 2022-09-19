@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Props({marca, lancamento}){
+function Lists({marca, lancamento}){
     return (
       <>
           <li>{marca} - {lancamento}</li>
@@ -8,14 +8,14 @@ function Props({marca, lancamento}){
     );
 }
 
-Props.propTypes = {
+Lists.propTypes = {
   marca: PropTypes.string,
   lancamento: PropTypes.number
 };
 
-Props.defaultProps = {
+Lists.defaultProps = {
   marca: "Marca não encontrada",
   lancamento: 123
 }
 
-export default Props;
+export default Lists;
