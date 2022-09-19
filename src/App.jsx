@@ -2,9 +2,10 @@ import React from 'react'
 
 import './App.css'
 
-import Index from './components/Index'
-import Evento from './components/Eventos'
+import Index from './components/Lists/Index'
+import Evento from './components/EventsReact/Eventos'
 import Formulario from './components/Formulario'
+import Condicional from './components/Condicional'
 
 
 
@@ -18,6 +19,8 @@ function App() {
       <Formulario />
 
       <Evento />
+
+      <Condicional />
     </div>
   );
 }
